@@ -6,7 +6,7 @@
 
 [MCU header file](#MCUHEADERFILE)
 
-[Serial peripheral interface (SPI)](#serial peripheralinter face (SPI))
+[Serial peripheral interface (SPI)](#SPI)
 
 # cmyk-rgb_color_sensor
 the aim of this project is to make a device (based on the stm32 microcontroller), which samples color from real life objects and displays the color's CMYK and rgb values on a lcd screen
@@ -72,3 +72,9 @@ when MISO & MOSI enabled (default config for SPI)
 * when a device is in slave mode, the NSS works as a standard "chip select" input, which lets the slave to communicate with it's master
 * in master mode, NSS can be used as either an output or input.
   In input mode, the master's NSS can prevent multi-master bus collision, and in output mode, it can drive a slave select signal to a slave
+#### types of slave managements
+* software slave management (SSM): when SSM =1, the slave select information (SSI) is driven by the bit value in register SPIx_CR1.
+The external NSS is free for use.
+
+* hardware slave management (NSS) pin makes the slave listen to whether the master enables it.
+* Master's NSS has to be connected to VDD to avoid errors (or unconfigured)
