@@ -6,7 +6,7 @@
 
 [MCU header file](#MCUHEADERFILE)
 
-[Serial peripheral interface (SPI)](#serialperipheralinterface(SPI))
+[Serial peripheral interface (SPI)](#serial peripheralinter face (SPI))
 
 # cmyk-rgb_color_sensor
 the aim of this project is to make a device (based on the stm32 microcontroller), which samples color from real life objects and displays the color's CMYK and rgb values on a lcd screen
