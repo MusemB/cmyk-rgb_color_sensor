@@ -1,5 +1,7 @@
 [general](#cmyk-rgb_color_sensor)
+
 [introduction](#introduction)
+
 [GPIO](#General-purposeinputoutput (GPIO))
 
 # cmyk-rgb_color_sensor
