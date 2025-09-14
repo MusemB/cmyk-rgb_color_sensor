@@ -2,7 +2,7 @@
 
 [introduction](#introduction)
 
-[GPIO](#General-purposeinputoutput (GPIO))
+[GPIO](#General-purpose-input-output(GPIO))
 
 [MCU header file](#MCUHEADERFILE)
 
@@ -27,7 +27,7 @@ I decided to create this sensor due to the fact that I'm learning about embedded
 
 
 
-## General-purpose input output (GPIO)
+## General-purpose-input-output(GPIO)
 
 
 ## MCU Header file
