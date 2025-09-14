@@ -22,7 +22,7 @@ the aim of this project is to make a device (based on the stm32 microcontroller)
 3. color sensor (tbd)
 
 
-##introduction
+## introduction
 I decided to create this sensor due to the fact that I'm learning about embedded C, and the usecase aligns with my hobby of painting.
 
 
