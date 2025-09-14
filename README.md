@@ -43,5 +43,22 @@ I decided to create this sensor due to the fact that I'm learning about embedded
 when MISO & MOSI enabled (default config for SPI)
 #### half-duplex communication:
 * When MOSI is connected to MISO with a resistor between the data lines (typically 1 kΩ).
-* master has to be configged to transmitter mode & slave to receiver mode
+* master has to be configured to transmitter mode & slave to receiver mode
 
+#### Simplex communication
+* when MOSI is only enabled. i.e master only transmits to slave
+
+### SPI functional block diagram
+* The shift register consists of 2 bytes
+* Tx buffer is connected to APB bus, which can write to it, and in turn
+  Tx buffer writes to the shift register, when the shift register is free (i.e, not used by MISO).
+  Afterwards, the data is sent from the shift register to MOSI
+  
+* Rx buffer reads from the shift register and writes to APB bus
+* both Rx and Tx buffers invoke an interrupt when they are full
+* master clock is controlled by Baud rate generator
+
+### slave select (NSS) pin management
+* when a device is in slave mode, the NSS works as a standard "chip select" input, which lets the slave to communicate with it's master
+* in master mode, NSS can be used as either an output or input.
+  In input mode, the master's NSS can prevent multi-master bus collision, and in output mode, it can drive a slave select signal to a slave
