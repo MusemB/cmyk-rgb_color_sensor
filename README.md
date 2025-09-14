@@ -16,5 +16,22 @@ the aim of this project is to make a device (based on the stm32 microcontroller)
 I decided to create this sensor due to the fact that I'm learning about embedded C, and the usecase aligns with my hobby of painting.
 
 
+
+## General-purpose input output (GPIO)
+
+
 ##MCU Header file
+
+## serial peripheral interface (SPI)
+* serial communication protocol between master and slave devices
+* consists of the following pins:
+* 1. Serial clock (SCLK) = a clock produced by master, which controls slave's clocks
+  2. Master out, slave in (MOSI)= pin, which sends output on master side and takes input on slave side
+  3. Master in, slave out (MISO) = pin, which does the converse of MOSI
+  4. slave control (SS) == used to select which slaves are active (slave is active when SS is 0)
+
+* SPI is synchronous serial
+* max distance = 10ft (3m)
+* max speed = fPCLK/2
+
 
