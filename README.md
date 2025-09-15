@@ -32,7 +32,7 @@ I decided to create this sensor due to the fact that I'm learning about embedded
 
 ## MCU Header file
 
-## serial peripheral interface (SPI)
+##(SPI)
 * serial communication protocol between master and slave devices
 * consists of the following pins:
 * 1. Serial clock (SCLK) = a clock produced by master, which controls slave's clocks
