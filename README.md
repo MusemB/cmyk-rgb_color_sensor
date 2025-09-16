@@ -59,7 +59,7 @@ when MISO & MOSI enabled (default config for SPI)
 * when MOSI is only enabled. i.e master only transmits to slave
 
 ### SPI functional block diagram
-* The shift register consists of 2 bytes
+* The shift register consists of 2 bytes & can be configged to either 1 byte or 2 bytes
 * Tx buffer is connected to APB bus, which can write to it, and in turn
   Tx buffer writes to the shift register, when the shift register is free (i.e, not used by MISO).
   Afterwards, the data is sent from the shift register to MOSI
@@ -78,3 +78,11 @@ The external NSS is free for use.
 
 * hardware slave management (NSS) pin makes the slave listen to whether the master enables it.
 * Master's NSS has to be connected to VDD to avoid errors (or unconfigured)
+
+#### SPI communication formats
+* consists of 3 factors:
+1. SCLK phase (CPHA)
+   *
+2. SCLK polarity (CPOL)
+3.  Data frame format (DFF)
+* the communication format is dependent on the clock phase, and must be the same between master and slave
